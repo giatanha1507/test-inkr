@@ -7,6 +7,7 @@ import List from './List'
 import Pricing from './Pricing'
 import Related from './Related'
 import Title from './Title'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 	return (
