@@ -130,3 +130,9 @@
     filter: invert(1);
   }
 }
+
+.card-background{
+  background-color: #141414;
+  padding: 24px;
+  margin-bottom: 24px;
+}
