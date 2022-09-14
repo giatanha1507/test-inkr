@@ -1,9 +1,9 @@
-import { createContext, useContext, useState } from 'react'
+import { faker } from '@faker-js/faker'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
-import { faker } from '@faker-js/faker';
+import { createContext, useContext, useState } from 'react'
 
 type Novel = {
-    id: string,
+	id: string
 	titleName: string
 	author: string
 	thumbnail: string
@@ -12,15 +12,15 @@ type Novel = {
 	readers: string
 	likes: string
 	tags: string[]
-    pricePerChap: number,
-    discount: number
+	pricePerChap: number
+	discount: number
 }
 
 type Chapter = {
-    id: string,
+	id: string
 	title: string
-	thumbnail: string,
-    unlocked: boolean,
+	thumbnail: string
+	unlocked: boolean
 	progress?: number
 }
 
@@ -62,67 +62,77 @@ export const NovelProvider = ({ children, initialNovel }: NovelProviderProps) =>
 }
 
 const INITIAL_NOVEL: Novel = {
-    pricePerChap: 5,
-    id: faker.datatype.uuid(),
-	titleName: 'Kasane',
+	pricePerChap: 5,
+	id: faker.datatype.uuid(),
+	titleName: 'Kasanes',
 	thumbnail: '/images/title.png',
 	author: 'By Kodansha',
 	category: 'Drama •',
 	chapters: [
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 01',
 			thumbnail: '/images/list1.png',
-            unlocked: true,
-			progress: 70
+			unlocked: true,
+			progress: 70,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 02',
 			thumbnail: '/images/list2.png',
-            unlocked: true,
+			unlocked: true,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 03',
 			thumbnail: '/images/list3.png',
-            unlocked: true
+			unlocked: true,
 		},
-        {   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 04',
 			thumbnail: '/images/list4.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 05',
 			thumbnail: '/images/list5.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 06',
 			thumbnail: '/images/list6.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 07',
 			thumbnail: '/images/list7.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 08',
 			thumbnail: '/images/list8.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 09',
 			thumbnail: '/images/list9.png',
-            unlocked: false
+			unlocked: false,
 		},
-		{   id: faker.datatype.uuid(),
+		{
+			id: faker.datatype.uuid(),
 			title: 'Chapter 10',
 			thumbnail: '/images/list10.png',
-            unlocked: false
+			unlocked: false,
 		},
 	],
 	readers: '74,483',
 	likes: '15,863',
 	tags: ['18+', 'new', 'trending', 'bestseller', 'manga'],
-    discount: 0.5,
+	discount: 0.5,
 }

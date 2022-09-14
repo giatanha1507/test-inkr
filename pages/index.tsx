@@ -8,16 +8,13 @@ import Pricing from '../components/Pricing'
 import Related from '../components/Related'
 import Title from '../components/Title'
 import { useNovel } from '../contexts/NovelContext'
-import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 	const { novel, setNovel } = useNovel()
 	console.log(novel)
 	return (
-		<div
-			style={{ padding: '20px 176px' }}
-		>
-			<Row gutter={[32, 0]} >
+		<div style={{ padding: '20px 176px' }}>
+			<Row gutter={[32, 0]}>
 				<Col span={16}>
 					<Title />
 					<Pricing />

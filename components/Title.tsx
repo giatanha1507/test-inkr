@@ -1,21 +1,12 @@
 import { LikeOutlined, MoreOutlined, ReadOutlined, ShareAltOutlined } from '@ant-design/icons'
 import { Button, Image, Tag } from 'antd'
-import * as React from 'react'
+import { useNovel } from '../contexts/NovelContext'
 import styles from '../styles/Home.module.css'
 
 export interface ITitleProps {}
 
-const data = {
-  titleName: "Kasane",
-  author: "By Kodansha",
-  category: "Drama •",
-  chapters: "10 Chapters",
-  readers: "74,483",
-  likes: "15,863",
-  tags:["18+", "new", "trending", "bestseller", "manga"]
-}
-
 export default function Title(props: ITitleProps) {
+	const { novel, setNovel } = useNovel()
 	return (
 		<div
 			style={{ display: 'flex', alignItems: 'flex-start', height: 320 }}
@@ -27,28 +18,54 @@ export default function Title(props: ITitleProps) {
 					preview={false}
 					width={180}
 					height={270}
-					src="/images/title.png"
+					src={novel.thumbnail}
 				/>
 			</div>
 			<div
-				style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', height: '100%' }}
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'space-between',
+					width: '100%',
+					height: '100%',
+				}}
 			>
 				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 					<div>
-						<h1 className={styles['title-story']}>{data.titleName}</h1>
-						<p className={styles['card-text']} style={{color:'rgba(255, 255, 255, 0.65)', fontWeight: 400}}>{data.author}</p>
-            <div className={styles['card-text']} style={{display:'flex', alignItems:'center', color:'rgba(255, 255, 255, 0.65)', fontWeight: 400}}>
-              <p>{data.category}</p>
-              <p style={{marginLeft: 4}}>{data.chapters}</p>
-            </div>
-            <div className={styles['card-text-detail']} style={{display:'flex', alignItems:'center'}} >
-              <ReadOutlined />
-              <span style={{marginLeft: 4}}>{data.readers}</span>
-              <LikeOutlined style={{marginLeft: 16}} />
-              <span style={{marginLeft: 4}}>{data.likes}</span>
-            </div>
+						<h1 className={styles['title-story']}>{novel.titleName}</h1>
+						<p
+							className={styles['card-text']}
+							style={{ color: 'rgba(255, 255, 255, 0.65)', fontWeight: 400 }}
+						>
+							{novel.author}
+						</p>
+						<div
+							className={styles['card-text']}
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								color: 'rgba(255, 255, 255, 0.65)',
+								fontWeight: 400,
+							}}
+						>
+							<p>{novel.category}</p>
+							<p style={{ marginLeft: 4 }}>{novel.chapters.length}</p>
+						</div>
+						<div
+							className={styles['card-text-detail']}
+							style={{ display: 'flex', alignItems: 'center' }}
+						>
+							<ReadOutlined />
+							<span style={{ marginLeft: 4 }}>{novel.readers}</span>
+							<LikeOutlined style={{ marginLeft: 16 }} />
+							<span style={{ marginLeft: 4 }}>{novel.likes}</span>
+						</div>
 						<div style={{ display: 'flex', marginTop: 25, textTransform: 'uppercase' }}>
-							{data.tags.map((tags,index) => <Tag key={index} className={styles['tag-text']}>{tags}</Tag>)}
+							{novel.tags.map((tags, index) => (
+								<Tag key={index} className={styles['tag-text']}>
+									{tags}
+								</Tag>
+							))}
 						</div>
 					</div>
 					<div style={{ color: 'rgba(255, 255, 255, 0.85)' }}>

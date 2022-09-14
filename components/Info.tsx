@@ -1,13 +1,10 @@
-import { Image } from 'antd';
-import * as React from 'react';
+import { Image } from 'antd'
 import styles from '../styles/Home.module.css'
-export interface IInfoProps {
-}
+export interface IInfoProps {}
 
-export default function Info (props: IInfoProps) {
-
-  return (
-    <div className={styles['card-background']}>
+export default function Info(props: IInfoProps) {
+	return (
+		<div className={styles['card-background']}>
 			<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 				<div style={{ marginRight: 12.5, paddingRight: 12.5 }}>
 					<p className={styles['card-text']}>Get The App</p>
@@ -20,5 +17,5 @@ export default function Info (props: IInfoProps) {
 				</div>
 			</div>
 		</div>
-  );
+	)
 }
