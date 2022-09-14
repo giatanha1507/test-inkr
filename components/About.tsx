@@ -143,7 +143,7 @@ export default function About (props: IAboutProps) {
                   <p>{facts.info}</p>
                   <span>&#58;</span>
                 </div>
-                <p className={styles['card-desc']} style={{color:'rgba(255, 255, 255, 0.85);'}}>{facts.content}</p>
+                <p className={styles['card-desc']} style={{color:'rgba(255, 255, 255, 0.85)'}}>{facts.content}</p>
             </div>
             )}
           </div>

@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import About from '../components/About'
 import Comment from '../components/Comment'
 import Info from '../components/Info'
-import List from '../components/List'
+import ListItem from '../components/ListItem'
 import Pricing from '../components/Pricing'
 import Related from '../components/Related'
 import Title from '../components/Title'
@@ -15,13 +15,13 @@ const Home: NextPage = () => {
 	console.log(novel)
 	return (
 		<div
-			style={{ width: '100vw', height: '100vh', backgroundColor: '#242424', padding: '20px 176px' }}
+			style={{ padding: '20px 176px' }}
 		>
 			<Row gutter={[32, 0]} >
 				<Col span={16}>
 					<Title />
 					<Pricing />
-					<List />
+					<ListItem />
 				</Col>
 				<Col span={8}>
 					<About />

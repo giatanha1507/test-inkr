@@ -51,7 +51,7 @@ export default function Title(props: ITitleProps) {
 							{data.tags.map((tags,index) => <Tag key={index} className={styles['tag-text']}>{tags}</Tag>)}
 						</div>
 					</div>
-					<div style={{ color: 'rgba(255, 255, 255, 0.85);' }}>
+					<div style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
 						<ShareAltOutlined
 							style={{
 								padding: 9,
