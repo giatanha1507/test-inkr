@@ -1,15 +1,18 @@
 import { Col, Row } from 'antd'
 import type { NextPage } from 'next'
-import About from './About'
-import Comment from './Comment'
-import Info from './Info'
-import List from './List'
-import Pricing from './Pricing'
-import Related from './Related'
-import Title from './Title'
+import About from '../components/About'
+import Comment from '../components/Comment'
+import Info from '../components/Info'
+import List from '../components/List'
+import Pricing from '../components/Pricing'
+import Related from '../components/Related'
+import Title from '../components/Title'
+import { useNovel } from '../contexts/NovelContext'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+	const { novel, setNovel } = useNovel()
+	console.log(novel)
 	return (
 		<div
 			style={{ width: '100vw', height: '100vh', backgroundColor: '#242424', padding: '20px 176px' }}
