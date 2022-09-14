@@ -65,14 +65,14 @@ const INITIAL_NOVEL: Novel = {
 	pricePerChap: 5,
 	id: faker.datatype.uuid(),
 	titleName: 'Kasanes',
-	thumbnail: '/images/title.png',
+	thumbnail: './images/title.png',
 	author: 'By Kodansha',
 	category: 'Drama •',
 	chapters: [
 		{
 			id: faker.datatype.uuid(),
 			title: 'Chapter 01',
-			thumbnail: '/images/list1.png',
+			thumbnail: '../images/list1.png',
 			unlocked: true,
 			progress: 70,
 		},
