@@ -127,7 +127,7 @@ const INITIAL_NOVEL: Novel = {
 		{
 			id: faker.datatype.uuid(),
 			title: 'Chapter 10',
-			thumbnail: '/images/chapterThumbnail0.png',
+			thumbnail: '/images/chapterThumbnail.png',
 			unlocked: false,
 		},
 	],
