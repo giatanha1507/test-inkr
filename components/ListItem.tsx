@@ -187,7 +187,7 @@ export default function ListItem(props: IListProps) {
 								{item.unlocked ? (
 									'FREE'
 								) : (
-									<DollarCircleFilled style={{ color: 'gold', marginRight: 4 }} />
+									<><DollarCircleFilled style={{ color: 'gold', marginRight: 4 }} />{novel.pricePerChap}</>
 								)}
 							</div>
 						</List.Item>
