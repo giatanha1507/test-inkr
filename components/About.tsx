@@ -11,23 +11,23 @@ const data = {
 		desc: "Kasane is an ugly girl who is severely bullied by her classmates because of her appearance; making things worse, Kasane's mother was a beautiful actress to whom Kasane is a dark contrast, even though she is as talented as her mother. However, there is nothing to do with this. Kasane is an ugly girl who is severely bullied by her classmates because of her appearance; making things worse, Kasane's mother was a beautiful actress to whom Kasane is a dark contrast, even though she is as talented as her mother. However, there is nothing to do with this.",
 		img: [
 			{
-				src: '/images/about1.png',
+				src: '/images/aboutThumbnail1.png',
 				atl: '#',
 			},
 			{
-				src: '/images/about2.png',
+				src: '/images/aboutThumbnail2.png',
 				atl: '#',
 			},
 			{
-				src: '/images/about3.png',
+				src: '/images/aboutThumbnail3.png',
 				atl: '#',
 			},
 			{
-				src: '/images/about4.png',
+				src: '/images/aboutThumbnail4.png',
 				atl: '#',
 			},
 			{
-				src: '/images/about5.png',
+				src: '/images/aboutThumbnail5.png',
 				atl: '#',
 			},
 		],
