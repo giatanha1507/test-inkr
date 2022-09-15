@@ -1,0 +1,26 @@
+.container {
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    box-sizing: initial;
+    background-color: #242424 !important;
+    overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1168px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1568px;
+    }
+}
