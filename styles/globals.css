@@ -60,3 +60,10 @@ a {
     background: black;
   }
 }
+
+
+@media (max-width: 1199px) {
+  div .ant-input {
+      width: 240px !important;
+  }
+}

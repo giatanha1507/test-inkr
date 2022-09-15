@@ -30,7 +30,7 @@ export default function Title(props: ITitleProps) {
 					height: '100%',
 				}}
 			>
-				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+				<div style={{ display: 'flex', justifyContent: 'space-between', alignItems:'baseline' }}>
 					<div>
 						<h1 className={styles['title-story']}>{novel.titleName}</h1>
 						<p
@@ -60,15 +60,15 @@ export default function Title(props: ITitleProps) {
 							<LikeOutlined style={{ marginLeft: 16 }} />
 							<span style={{ marginLeft: 4 }}>{novel.likes}</span>
 						</div>
-						<div style={{ display: 'flex', marginTop: 25, textTransform: 'uppercase' }}>
+						<div style={{ display: 'flex', marginTop: 25, textTransform: 'uppercase', flexWrap:'wrap' }}>
 							{novel.tags.map((tags, index) => (
-								<Tag key={index} className={styles['tag-text']}>
+								<Tag key={index} className={styles['tag-text']} style={{marginBottom: 8}}>
 									{tags}
 								</Tag>
 							))}
 						</div>
 					</div>
-					<div style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+					<div style={{ color: 'rgba(255, 255, 255, 0.85)' , display: 'flex'}}>
 						<ShareAltOutlined
 							style={{
 								padding: 9,

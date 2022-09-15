@@ -13,12 +13,8 @@ import styles from './index.module.css'
 
 const Home: NextPage = () => {
 	const { novel, setNovel } = useNovel()
-	console.log(novel)
 	return (
 		<Layout className={styles.container}>
-			<div style={{ 
-				// padding: '20px 176px'
-				}}>
 				<Row gutter={[32, 0]}>
 					<Col span={24} lg={15} xl={16}>
 						<Title />
@@ -32,7 +28,6 @@ const Home: NextPage = () => {
 						<Info />
 					</Col>
 				</Row>
-			</div>
 		</Layout>
 	)
 }
